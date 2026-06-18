@@ -1,0 +1,55 @@
+# Cardcaptor Sakura Smart Display
+
+A custom Wi-Fi desktop tracker and clock featuring a Cardcaptor Sakura themed 3D-printed enclosure. This repository contains the code and STL files needed to build your own.
+
+---
+
+## Previews
+
+Here is what the finished product looks like:
+
+![Cardcaptor Sakura Smart Display Angled View](Images/PXL_20260617_054050160.PORTRAIT.jpg)
+
+![Cardcaptor Sakura Smart Display Front Clock View](Images/PXL_20260617_110148640.jpg)
+
+---
+
+## Hardware and Bill of Materials
+
+### Required Hardware
+
+* **Display Module:** Freenove 2.8 Inch Display [Freenove Store - FNK0114](https://store.freenove.com/products/fnk0114)[cite: 2].
+* **Fasteners:** 4 x M3x12 screws (required to secure the 3D-printed enclosure plates together).
+
+> **Important Note on Hardware:** If you purchase or use a different screen variant, model, or size than the FNK0114 display used here, you will need to modify the main sketch configuration and the display driver libraries to match your specific hardware parameters (such as the controller chip, pinouts, and screen resolution)[cite: 2].
+
+---
+
+## Setup and Wi-Fi Configuration
+
+Before uploading the code to your micro-controller, you must configure your local network credentials within the main sketch file (`Cat_Plant_Clock.ino`)[cite: 1].
+
+1. Open the `Cat_Plant_Clock.ino` file in your IDE[cite: 1].
+2. Locate the **Wi-Fi Credentials** section near the top of the file[cite: 1]:
+
+```cpp
+// --- Wi-Fi Credentials ---
+const char* ssid     = "YOUR_SSID";
+const char* password = "YOUR_PASSWORD";
+
+```
+
+3. Replace `"YOUR_SSID"` with your actual Wi-Fi network name[cite: 1].
+4. Replace `"YOUR_PASSWORD"` with your actual Wi-Fi network password[cite: 1].
+5. Save the file and upload the sketch to your device[cite: 1].
+
+---
+
+## Repository Structure
+
+* `/STL` - Contains all 3D model files required to print the enclosure and decorative components.
+* `/Images` - Contains preview images of the project layout.
+* Core firmware source code files:
+* `Cat_Plant_Clock.ino`[cite: 1]
+* `display.cpp`[cite: 2]
+* `display.h`[cite: 2, 3]
